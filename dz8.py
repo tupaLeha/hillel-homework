@@ -1,3 +1,4 @@
+import os
 import random
 import string
 import time
@@ -23,6 +24,7 @@ def source_code():
     f = open('app.py', 'r')
     text = str(f.readlines())
     f.close()
+    print(os.getcwd())
 
     return text
 
@@ -99,5 +101,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0')
 
